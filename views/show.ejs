@@ -1,0 +1,31 @@
+<%- include('header')%>
+    <%- include('nav') %>
+
+        <main>
+            <% key.forEach(function(key,index){ %>
+                <div class="books">
+                    <div>
+                        <img src="<%= key.image %>" alt="" class="book-img">
+                    </div>
+                    <div class="descp">
+                        <h2 class="book-name">
+                            <%= key.bookName %>
+                        </h2>
+                        <h3 class="author">
+                            <%= key.bookAuthor %>
+                        </h3>
+                        <h3 class="prize">
+                            <%= key.bookPrize %>$
+                        </h3>
+                        <p class="textContent">
+                            <%= key.textContent %>
+                        </p>
+
+                        <a href="/details/<%= key._id %>" class="button">Explore More</a>
+
+                        <!-- <a href="" class="button">Bey Now</a> -->
+                    </div>
+                </div>
+                <%})%>
+        </main>
+        <%- include('footer') %>

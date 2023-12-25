@@ -1,0 +1,238 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    background-color: #dedede;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+/* ---------------------------------------------------------- Main css -------------------------------------------------------------*/
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+
+/* ------------------------------------------------- for mobiles -------------------------------------------------------------------- */
+@media(max-width: 900px) {
+
+    /* ------------------------- main book store ---------------------------- */
+    main {
+        margin-top: 1em;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .books {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: row;
+        background-color: transparent;
+        border: 1px solid #7700f5;
+        border: 1px solid;
+        border-radius: 10px;
+        margin-top: 6em;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+
+    .book-img {
+        width: 100%;
+        max-width: 1000px;
+        margin: 1em 1.5rem .8rem 1.5rem;
+        border-radius: 3px;
+        transition: transform 1s;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    .book-img:hover {
+        transform: scale(1.05);
+    }
+
+    .descp {
+        margin: 1.5em;
+        padding: 1em;
+        text-align: left;
+    }
+
+    .book-name {
+        font-weight: bold;
+        padding-bottom: 0.2em;
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        color: #000;
+        text-align: left;
+    }
+
+    .author {
+        padding-bottom: 0.6em;
+        font-size: 0.9em;
+        letter-spacing: 1px;
+        color: #000;
+    }
+
+    .prize {
+        padding-bottom: 1.2em;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: #000;
+    }
+
+    .textContent {
+        font-size: 0.6em;
+        letter-spacing: 1px;
+        margin-bottom: 1.1em;
+        color: #000;
+    }
+
+    .descp .button {
+        margin-top: 1em;
+        background: none;
+        border: none;
+        background-color: #444;
+        padding: 0.6em .8em;
+        font-size: 0.7em;
+        border-radius: 20px;
+        font-weight: bolder;
+        transition: transform 0.8s;
+        display: block;
+    }
+
+    .descp a {
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .descp .button:hover {
+        background-color: #000;
+        transform: scale(1.1);
+    }
+}
+
+/*--------------------------------------------------------------- fOR PC AND LAPTOPS -------------------------------------------- */
+@media(min-width: 900px) {
+
+    /* ------------------- MAIN BOOKS ---------------------------------- */
+    main {
+        margin-top: 1em;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 8%;
+        overflow: hidden;
+    }
+
+    .books {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 650px;
+        justify-content: space-evenly;
+        border: 1px solid #7700f5;
+        background-color: transparent;
+        border-radius: 10px;
+        margin-bottom: 3em;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .book-img {
+        width: 100%;
+        max-width: 1000px;
+        border-radius: 3px;
+        transition: transform 1s;
+
+        margin: 1.4em 1.5rem 1.4rem 1.5rem;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+
+    .book-img:hover {
+        transform: scale(1.05);
+    }
+
+    .descp {
+        margin: 2em 0.5em 1.5em 2.5em;
+        padding: 1em;
+
+    }
+
+    .book-name {
+        font-weight: bold;
+        padding-bottom: 0.5em;
+        font-size: 1.6em;
+        letter-spacing: 1px;
+        color: #000;
+        text-align: left;
+    }
+
+    .author {
+        padding-bottom: 1em;
+        font-size: 1.5em;
+        text-decoration: underline;
+        letter-spacing: 1px;
+        color: #000;
+    }
+
+    .prize {
+        padding-bottom: 0.8em;
+        font-size: 1.8em;
+        letter-spacing: 1px;
+        color: #000;
+    }
+
+    .textContent {
+        font-size: 1.2em;
+        letter-spacing: 1px;
+        color: #000000af;
+        margin-bottom: 2em;
+    }
+
+    .descp .button {
+        margin-top: 1em;
+        background: none;
+        border: none;
+        background-color: #444;
+        padding: 0.6em 1.5em;
+        font-size: 1em;
+        border-radius: 20px;
+        font-weight: bolder;
+        transition: all ease 2s;
+    }
+
+    .descp a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .descp .button:hover {
+        background-color: #000;
+    }
+
+}

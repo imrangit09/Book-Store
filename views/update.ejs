@@ -1,0 +1,61 @@
+<%- include('header') %>
+    <%- include('nav') %>
+        <!-- <div class="formContainer">
+    <div class="form-wrapper">
+    <form action="/update/<%= book._id %>" method="post">
+        <input type="url" name="image" value="<%= book.image  %>" placeholder="Enter book image url"><br><br>
+        <input type="text" value="<%= book.bookName  %>" name="bookName" placeholder="Enter book name"><br><br>
+        <input type="text" value="<%= book.bookAuthor %>" name="bookAuthor" placeholder="Enter book author"><br><br>
+        <input type="number" value="<%= book.bookPages  %>" name="bookPages" placeholder="Enter book pages"><br><br>
+        <input type="number" value="<%= book.bookPrize  %>" name="bookPrize" placeholder="Enter book prize"><br><br>
+
+        <button>Update</button>
+    </form>
+</div>
+</div> -->
+
+        <div class="formContainer">
+            <!-- <header>
+        <h1 id="title"> Fill Book Details Here</h1>
+    </header> -->
+            <div class="form-wrapper">
+                <form action="/update/<%= book._id %>" method="post">
+                    <div class="bookImg">
+                        <label class="bookImage">Book Url Link </label><br>
+                        <input type="url" class="input-styling" value="<%= book.image %>" name="image"
+                            placeholder="Enter book image url"><br><br>
+                    </div>
+                    <div class="name">
+                        <label id="name-label">Book Name</label><br>
+                        <input type="text" class="input-styling" value="<%= book.bookName %>" name="bookName"
+                            placeholder="Enter book name"><br><br>
+                    </div>
+                    <div class="bookAuthor">
+                        <label id="bookAuthor">Book Author</label><br>
+                        <input type="text" class="input-styling" value="<%= book.bookAuthor %>" name="bookAuthor"
+                            placeholder="Enter book author"><br><br>
+                    </div>
+                    <div class="code">
+                        <label id="bookCode">book Code</label><br>
+                        <input type="number" name="bookCode" class="input-styling" value="<%= book.bookCode %>"
+                            id="number" placeholder="Enter Area code" pattern="[0-9]{3}" min="001" max="999"
+                            required><br><br>
+                    </div>
+                    <div class="number">
+                        <label>Book Prize</label><br>
+                        <input type="number" class="input-styling" value="<%= book.bookPrize %>" name="bookPrize"
+                            placeholder="Enter book prize"><br><br>
+                    </div>
+                    <div class="discription">
+                        <label id="discription">Enter Book Discription</label><br>
+                        <textarea name="textContent"  maxlength="100" class="input-styling" style="height: 65px;"
+                            placeholder="Enter Book details Here">value="<%= book.textContent %>"</textarea><br><br>
+                    </div>
+                    <div class="submit">
+                        <button type="submit" id="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <%- include('footer') %>

@@ -1,0 +1,54 @@
+<!-- <%- include('header') %>
+<%- include('nav') %>
+<div id="details">
+    <div class="data">
+<div class="imageData">
+    <img src="<%= book.image %>" class="image">
+</div>
+<div class="detailsData">
+
+<h1><%= book.bookName %> </h1>
+<h1><%= book.bookAuthor %></h1>
+<h1><%= book.bookPages %> </h1>
+<h1><%= book.bookPrize %></h1>
+</div>
+<a href="/show">Back</a>
+</div>
+</div>
+<%- include('footer') %> -->
+
+
+
+<%- include('header')%>
+    <%- include('nav') %>
+        <main>
+
+            <div class="books">
+                <div>
+                    <img src="<%= book.image %>" alt="" class="book-img">
+                </div>
+                <div class="descp">
+                    <h1 class="book-name">
+                        <%= book.bookName %>
+                    </h1>
+                    <h1 class="author">
+                        <%= book.bookAuthor %>
+                    </h1>
+                    <!-- <h1 class="book-code">
+                        <%= book.bookCode %>
+                    </h1> -->
+                    <h1 class="prize">
+                        <%= book.bookPrize %>$
+                    </h1>
+                    <p class="textContent">
+                        <%= book.textContent %>
+                    </p>
+
+                    <a href="/delete/<%= book._id %>" class="button">Delete</a>
+
+                    <a href="/update/<%= book._id %>" class="button">Update</a>
+                </div>
+            </div>
+
+        </main>
+        <%- include('footer') %>
